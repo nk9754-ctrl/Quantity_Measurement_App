@@ -2,7 +2,9 @@ public class Quantity_Measurement_App {
 
     enum LengthUnit {
         FEET(1.0),
-        INCH(1.0 / 12.0);
+        INCH(1.0 / 12.0),
+        YARD(3.0),
+        CM(0.393701 / 12.0); // convert cm → inch → feet
 
         private final double factor;
 
@@ -40,9 +42,9 @@ public class Quantity_Measurement_App {
     }
 
     public static void main(String[] args) {
-        QuantityLength q1 = new QuantityLength(1.0, LengthUnit.FEET);
-        QuantityLength q2 = new QuantityLength(12.0, LengthUnit.INCH);
+        QuantityLength q1 = new QuantityLength(1.0, LengthUnit.YARD);
+        QuantityLength q2 = new QuantityLength(3.0, LengthUnit.FEET);
 
-        System.out.println(q1.equals(q2));
+        System.out.println(q1.equals(q2)); // true
     }
 }
