@@ -47,4 +47,4 @@ public class Quantity_Measurement_App {
 
         System.out.println(q1.equals(q2)); // true
     }
-}
+}// UC6 completed: length addition
